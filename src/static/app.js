@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const participantsHeading = document.createElement("p");
         participantsHeading.innerHTML = "<strong>Participants:</strong>";
+        const participantsPanel = document.createElement("div");
+        participantsPanel.className = "participants-panel";
         const participantsList = document.createElement("ul");
         participantsList.className = "participants-list";
 
@@ -55,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
           participantsList.appendChild(participant);
         });
 
-        activityCard.append(participantsHeading, participantsList);
+        participantsPanel.append(participantsHeading, participantsList);
+        activityCard.appendChild(participantsPanel);
 
         activitiesList.appendChild(activityCard);
 
